@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 
-import './db.js';
+const db = require('./db.js');
 
 const server = express();
 
@@ -31,4 +31,4 @@ server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.status(status).send(message);
 });
 
-export default server;
+module.exports = server;

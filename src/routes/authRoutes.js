@@ -1,5 +1,4 @@
-import express from 'express'
-const router = express.Router()
+const router = require('express').Router()
 
 router.post('/register', (res, req) => {
     res.send('User Create and login')
@@ -12,4 +11,4 @@ router.post('/logout', (res, req) => {
     res.send('User logout')
 })
 
-export default router;
+module.exports = router;

@@ -1,5 +1,4 @@
-import express from 'express'
-const router = express.Router()
+const router = require('express').Router();
 
 router.post('/addSpent', (req, res) => {
     res.send('Add spent')
@@ -17,4 +16,4 @@ router.delete('/:id', (req, res) => {
     res.send('Delete spent by id')
 })
 
-export default router;
+module.exports = router;

@@ -1,4 +1,4 @@
-import { DataTypes } from 'sequelize';
+const { DataTypes } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 const SpentModel = (sequelize) => {
@@ -28,4 +28,4 @@ const SpentModel = (sequelize) => {
   });
 };
 
-export default SpentModel;
+module.exports = SpentModel;
