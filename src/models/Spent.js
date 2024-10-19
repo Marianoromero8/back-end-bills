@@ -10,12 +10,20 @@ const SpentModel = (sequelize) => {
       allowNull: false,
       primaryKey: true
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    amount: {
       type: DataTypes.DECIMAL(10, 2)
+    },
+    spentType: {
+      type: DataTypes.ENUM('monthly', 'fixed', 'necessary', 'unnecessary'),
+      allowNull: false,
     },
     date: {
       type: DataTypes.DATE,

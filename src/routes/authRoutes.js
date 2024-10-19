@@ -1,13 +1,13 @@
 const router = require('express').Router()
 
-router.post('/register', (res, req) => {
+router.post('/register', (req, res) => {
     res.send('User Create and login')
 })
-router.post('/login', (res, req) => {
+router.post('/login', (req, res) => {
     res.send('User Create and login')
 })
 
-router.post('/logout', (res, req) => {
+router.post('/logout', (req, res) => {
     res.send('User logout')
 })
 

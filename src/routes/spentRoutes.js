@@ -1,11 +1,11 @@
 const router = require('express').Router();
+const { addSpent } = require('../controllers/addSpent');
+const { history } = require('../controllers/history');
 
-router.post('/addSpent', (req, res) => {
-    res.send('Add spent')
-})
-router.get('/history', (req, res) => {
-    res.send('Get history spents')
-})
+router.post('/addSpent', addSpent)
+
+router.get('/history', history)
+
 router.get('/:id', (req, res) => {
     res.send('Get spent by id')
 })
