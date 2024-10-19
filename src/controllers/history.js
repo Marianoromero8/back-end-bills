@@ -5,10 +5,11 @@ const history = async (req, res) => {
     const historyDB = await Spent.findAll();
 
     const mapHistory = historyDB.map(spent => ({
+        id: spent.id,
         title:  spent.title,
         description: spent.description,
         amount: spent.amount,
-        date: spent.amount
+        date: spent.date
     }))
     res.status(200).json(mapHistory)
 }catch(error){
